@@ -1,9 +1,4 @@
 import React, { useState } from 'react';
-import {
-    Route,
-    NavLink,
-    HashRouter
-} from 'react-router-dom';
 import Home from './Home';
 import Services from './Services';
 import Gallery from './Gallery';
@@ -11,25 +6,42 @@ import Contact from './Contact';
 
 const Main = () => {
     const [ currentPage, setCurrentPage ] = useState('home');
-    const handlePageChange = (page) => {
+    const handlePageChange = (page) => () => {
         setCurrentPage(page);
     }
+    let mainContent;
+
+    switch (currentPage) {
+        case 'home':
+            mainContent = <Home />;
+            break;
+        case 'services':
+            mainContent = <Services />;
+            break;
+        case 'gallery':
+            mainContent = <Gallery />;
+            break;
+        case 'contact':
+            mainContent = <Contact />;
+            break;
+        default:
+            mainContent = <Home />;
+            
+    }
+
     return (
-        <div className='navbar'>
-            <HashRouter>
-                <div>
-                    <ul>
-                        <li><NavLink to='/'>Etusivu</NavLink></li>
-                        <li><NavLink to='/services'>Palvelut</NavLink></li>
-                    </ul>
-                </div>
-                <div>
-                    <Route path='/' Component={Home} />
-                    <Route path='/services' Component={Services} />
-                </div>
-            </HashRouter>
+        <div>
+            <div>
+                <button onClick={handlePageChange('home')}>Etusivu</button>
+                <button onClick={handlePageChange('services')}>Palvelut</button>
+                <button onClick={handlePageChange('gallery')}>Galleria</button>
+                <button onClick={handlePageChange('contact')}>Yhteystiedot</button>
+            </div>
+            <div>
+                {mainContent}
+            </div>
         </div>
-    )
+    );
 }
 
 export default Main;

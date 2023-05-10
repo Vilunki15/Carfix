@@ -87,3 +87,21 @@ const Main = ({ currentPage }) => {
 }
 
 export default Main;
+
+
+ return (
+        <div className='navbar'>
+            <HashRouter>
+                <div>
+                    <ul>
+                        <li><NavLink to='/'>Etusivu</NavLink></li>
+                        <li><NavLink to='/services'>Palvelut</NavLink></li>
+                    </ul>
+                    <div className='main'>
+                        <Route path='/' Component={Home} />
+                        <Route path='/services' Component={Services} />
+                    </div>
+                </div>
+            </HashRouter>
+        </div>
+    )
