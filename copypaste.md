@@ -105,3 +105,19 @@ export default Main;
             </HashRouter>
         </div>
     )
+
+
+    <table>
+                <tr>
+                    <td>CarFix Oulainen</td>
+                    <td>Tervatie 4, 86300 Oulainen</td>
+                </tr>
+                <tr>
+                    <td>Puhelin: 045 224 9515</td>
+                    <td>Sähköposti: carfixoulainen@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Y-Tunnus: 2821171-5</td>
+                    <td>Verkkosivut: &copy;Vilunki 2023</td>
+                </tr>
+            </table>

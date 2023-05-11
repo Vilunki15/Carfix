@@ -1,3 +1,53 @@
+body {
+  background-color: #F6F6F6;
+  font-family: FiraSans, sans-serif;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+
 .navbar {
-  margin: 50px;
+  display: flex;
+  flex-direction: row;
+}
+.mobile-menu-button {
+  display: none;
+}
+
+
+
+footer {
+  background-color: #404040;
+  color: #F5F5F5;
+  padding: 50px;
+  padding-top: 25px;
+  font-size: 1.25em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+footer li {
+  margin-top: 25px;
+}
+
+@media only screen and (max-width: 786px) {
+  .mobile-menu-button {
+    display: block;
+  }
+  .mobile-menu-button:hover, .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+  .container-left,
+  .container-right {
+    width: 100%;
+  }
 }

@@ -1,4 +1,6 @@
 import React from 'react';
+import './App.css';
+import './Assets/Font/fonts.css';
 
 const Gallery = () => {
     return (
