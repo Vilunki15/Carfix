@@ -23,9 +23,18 @@ const Main = () => {
     const handlePageChange = (page) => () => {
         setCurrentPage(page);
     }
-    const [ currentMenu, setCurrentMenu ] = useState();
-    if (currentWidth < 786) {
-    
+    //useState for keeping mobile meny state.  
+    const [ currentMenu, setCurrentMenu ] = useState('off');
+    const handleNavbtn = () => {
+        let navbar = document.querySelector('.navbar');
+        if (currentMenu == 'on') {
+            navbar.classList.remove('open');
+            setCurrentMenu('off');
+        }
+        else {
+            navbar.classList.add('open');
+            setCurrentMenu('on');
+        }
     }
     let mainContent;
     //Switch case for page selector
@@ -45,14 +54,13 @@ const Main = () => {
         default:
             mainContent = <Home />;
     }
-     
     //returning navbuttons and selected content. Also social media links
     return (
         <div>
             <div className='mobile-menu-button'>
-                <button onClick={}>☰</button>
+                <button onClick={handleNavbtn}>☰</button>
             </div>
-            <div className='navbar'>
+            <div className='navbar' id="nappi">
                 <button onClick={handlePageChange('home')}>ETUSIVU</button>
                 <button onClick={handlePageChange('services')}>PALVELUT</button>
                 <button onClick={handlePageChange('gallery')}>GALLERIA</button>

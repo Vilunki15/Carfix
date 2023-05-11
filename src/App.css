@@ -17,8 +17,6 @@ img {
   display: none;
 }
 
-
-
 footer {
   background-color: #404040;
   color: #F5F5F5;
@@ -36,16 +34,15 @@ footer li {
 
 @media only screen and (max-width: 786px) {
   .mobile-menu-button {
-    display: flex;
-    flex-direction: column;
+    display: block;
   }
   .navbar {
     display: none;
+    flex-direction: column;
   }
-  
-
-
-
+  .navbar.open {
+    display: flex;
+  }
 
 
   footer {
