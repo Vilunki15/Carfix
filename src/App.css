@@ -36,12 +36,17 @@ footer li {
 
 @media only screen and (max-width: 786px) {
   .mobile-menu-button {
-    display: block;
-  }
-  .mobile-menu-button:hover, .navbar {
     display: flex;
     flex-direction: column;
   }
+  .navbar {
+    display: none;
+  }
+  
+
+
+
+
 
   footer {
     flex-direction: column;

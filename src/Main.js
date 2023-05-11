@@ -27,10 +27,6 @@ const Main = () => {
     if (currentWidth < 786) {
     
     }
-
-
-
-
     let mainContent;
     //Switch case for page selector
     switch (currentPage) {
@@ -49,12 +45,12 @@ const Main = () => {
         default:
             mainContent = <Home />;
     }
-    
+     
     //returning navbuttons and selected content. Also social media links
     return (
         <div>
             <div className='mobile-menu-button'>
-                <button>☰</button>
+                <button onClick={}>☰</button>
             </div>
             <div className='navbar'>
                 <button onClick={handlePageChange('home')}>ETUSIVU</button>
