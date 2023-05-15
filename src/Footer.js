@@ -16,7 +16,7 @@ const Footer = () => {
                 </div>
                 <div className='container-right'>
                     <ul>
-                        <li >Puhelin: 045 224 9515</li>
+                        <li>Puhelin: 045 224 9515</li>
                         <li>Sähköposti: carfixoulainen@gmail.com</li>
                         <li>Verkkosivut: &copy;Vilunki 2023</li>
                     </ul>
