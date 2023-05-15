@@ -19,7 +19,6 @@ const Main = () => {
         };
     }, []);
     */
-   
     //Using useState to store current main content
     const [ currentPage, setCurrentPage ] = useState('home');
     //function for pagechange

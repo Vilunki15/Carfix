@@ -5,6 +5,7 @@ body {
   border: none;
   text-shadow: 0 0 0px black;
 }
+
 .content {
   width: 100%;
   max-width: 100%;
@@ -25,17 +26,17 @@ h3 {
   font-size: 1.5em;
   margin: 0;
 }
-p, label, .contentLI{
+p, label, .content-li {
   font-family: FiraSans, sans-serif;
   margin: 0;
   color: #404040;
   font-size: 1.25em;
   margin-right: 15px;
 }
-#singleText {
+.single-text {
   margin: 25px 0px;
 }
-.contentLI {
+.content-li {
   margin: 6px 0px;
   margin-right: 15px;
 
@@ -84,6 +85,7 @@ footer {
 
 footer li {
   margin-top: 25px;
+  list-style-type: none;
 }
 
 @media only screen and (max-width: 786px) {
@@ -93,6 +95,7 @@ footer li {
   .navbar {
     display: none;
     flex-direction: column;
+    
   }
   .navbar.open {
     display: flex;

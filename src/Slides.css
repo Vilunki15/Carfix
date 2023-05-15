@@ -1,0 +1,16 @@
+.each-slide-effect > div {
+    justify-content: center;
+    background-size: cover;
+    height: 750px;
+    width: 750px;
+    margin: 5px auto;
+
+}
+
+@media only screen and (max-width: 786px) {
+    .each-slide-effect > div {
+        margin: auto auto;
+        height: 500px;
+        width: 500px;
+    }
+}

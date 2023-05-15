@@ -7,12 +7,12 @@ const Home = () => {
         <div className='content'>
             <h1>Etusivu</h1>
             <p>Autonpesu- ja fixauspalvelut laidasta laitaan teille tarjoaa CarFix Oulainen!</p>
-            <label htmlFor='contentUL'>Palveluitamme: </label>
-            <ul id='contentUL'> 
-                <li className='contentLI'>autonpesut sisältä ja ulkoa</li>
-                <li className='contentLI'>auton fixaukset</li>
-                <li className='contentLI'>kiillotukset</li>
-                <li className='contentLI'>vahaus</li>
+            <label htmlFor='content-ul'>Palveluitamme: </label>
+            <ul id='content-ul'> 
+                <li className='content-li'>autonpesut sisältä ja ulkoa</li>
+                <li className='content-li'>auton fixaukset</li>
+                <li className='content-li'>kiillotukset</li>
+                <li className='content-li'>vahaus</li>
             </ul>
         </div>
     )
