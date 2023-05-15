@@ -22,26 +22,26 @@ const Gallery = () => {
     ];
     return (
         <div className='gallery' style={{backgroundColor: "#404040"}}>
-        <Slide>
-            <div className='each-slide-effect'>
-                <div style={{ 'backgroundImage': `url(${images[0]})` }}></div>
-            </div>
-            <div className='each-slide-effect'>
-                <div style={{ 'backgroundImage': `url(${images[1]})` }}></div>
-            </div>
-            <div className='each-slide-effect'>
-                <div style={{ 'backgroundImage': `url(${images[2]})` }}></div>
-            </div>
-            <div className='each-slide-effect'>
-                <div style={{ 'backgroundImage': `url(${images[3]})` }}></div>
-            </div>
-            <div className='each-slide-effect'>
-                <div style={{ 'backgroundImage': `url(${images[4]})` }}></div>
-            </div>
-            <div className='each-slide-effect'>
-                <div style={{ 'backgroundImage': `url(${images[5]})` }}></div>
-            </div>
-        </Slide>
+            <Slide>
+                <div className='each-slide-effect'>
+                    <div style={{ 'backgroundImage': `url(${images[0]})` }}></div>
+                </div>
+                <div className='each-slide-effect'>
+                    <div style={{ 'backgroundImage': `url(${images[1]})` }}></div>
+                </div>
+                <div className='each-slide-effect'>
+                    <div style={{ 'backgroundImage': `url(${images[2]})` }}></div>
+                </div>
+                <div className='each-slide-effect'>
+                    <div style={{ 'backgroundImage': `url(${images[3]})` }}></div>
+                </div>
+                <div className='each-slide-effect'>
+                    <div style={{ 'backgroundImage': `url(${images[4]})` }}></div>
+                </div>
+                <div className='each-slide-effect'>
+                    <div style={{ 'backgroundImage': `url(${images[5]})` }}></div>
+                </div>
+            </Slide>
         </div>
     )
 }
