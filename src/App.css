@@ -2,19 +2,38 @@ body {
   background-color: #F6F6F6;
   font-family: FiraSans, sans-serif;
   margin: 0;
+  border: none;
+  
 }
 
 img {
   max-width: 100%;
+  display: block;
 }
-
 
 .navbar {
   display: flex;
   flex-direction: row;
+  background-color: #404040;
+  border: none;
+  justify-content: center;
 }
 .mobile-menu-button {
   display: none;
+  background-color: #404040;
+}
+button {
+  background-color: #404040;
+  padding: 10px 20px;  
+  text-align: center;
+  color: #F5F5F5;
+  font-size: 20px;
+  border: 0;
+  transition: all 0.4s ease;
+}
+button:hover {
+  transform: scale(1.05);
+  background-color: #5A5A5A;
 }
 
 footer {
@@ -43,7 +62,6 @@ footer li {
   .navbar.open {
     display: flex;
   }
-
 
   footer {
     flex-direction: column;

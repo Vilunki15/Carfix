@@ -7,6 +7,7 @@ import './App.css';
 import './Assets/Font/fonts.css';
 
 const Main = () => {
+    /** 
     const [ currentWidth, setCurrentWidth ] = useState(window.innerWidth);
     useEffect(() => {
         const handleResize = () => {
@@ -17,27 +18,29 @@ const Main = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+    */
+   
     //Using useState to store current main content
     const [ currentPage, setCurrentPage ] = useState('home');
     //function for pagechange
     const handlePageChange = (page) => () => {
         setCurrentPage(page);
     }
-    //useState for keeping mobile meny state.  
-    const [ currentMenu, setCurrentMenu ] = useState('off');
+    //useState for keeping mobile menu state.  
+    const [ isMenuOpen, setIsMenuOpen ] = useState('off');
     const handleNavbtn = () => {
         let navbar = document.querySelector('.navbar');
-        if (currentMenu == 'on') {
+        if (isMenuOpen == 'on') {
             navbar.classList.remove('open');
-            setCurrentMenu('off');
+            setIsMenuOpen('off');
         }
         else {
             navbar.classList.add('open');
-            setCurrentMenu('on');
+            setIsMenuOpen('on');
         }
     }
-    let mainContent;
     //Switch case for page selector
+    let mainContent;
     switch (currentPage) {
         case 'home':
             mainContent = <Home />;
@@ -54,19 +57,23 @@ const Main = () => {
         default:
             mainContent = <Home />;
     }
+    //function for url redirecting
+    const redirectToUrl = (url) => {
+        window.open(url, '_blanck', 'noreferrer noopener');
+    }
     //returning navbuttons and selected content. Also social media links
     return (
         <div>
             <div className='mobile-menu-button'>
                 <button onClick={handleNavbtn}>☰</button>
             </div>
-            <div className='navbar' id="nappi">
+            <div className='navbar'>
                 <button onClick={handlePageChange('home')}>ETUSIVU</button>
                 <button onClick={handlePageChange('services')}>PALVELUT</button>
                 <button onClick={handlePageChange('gallery')}>GALLERIA</button>
                 <button onClick={handlePageChange('contact')}>YHTEYSTIEDOT</button>
-                <button><a href='https://www.facebook.com/CarFixoulainen/' target='_blanck' rel='noreferrer noopener'>FACEBOOK</a></button>
-                <button><a href='https://www.instagram.com/carfix_oulainen/' target='_blanck' rel='noreferrer noopener'>INSTAGRAM</a></button>
+                <button onClick={() => redirectToUrl('https://www.facebook.com/CarFixoulainen/')}>FACEBOOK</button>
+                <button onClick={() => redirectToUrl('https://www.instagram.com/carfix_oulainen/')}>INSTAGRAM</button>
             </div>
             <div>
                 {mainContent}
