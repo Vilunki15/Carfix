@@ -5,12 +5,11 @@ body {
   border: none;
   text-shadow: 0 0 0px black;
 }
-
 .content {
-  width: 100%;
-  max-width: 100%;
-  padding-left: 15%;
-  padding-right: 10%;
+  padding: 40px 20px;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
 }
 h1 {
   font-family: FiraSans, sans-serif;
@@ -44,6 +43,7 @@ p, label, .content-li {
 img {
   max-width: 100%;
   display: block;
+  min-width: 100%;
 }
 .navbar {
   display: flex;
