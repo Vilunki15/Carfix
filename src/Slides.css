@@ -1,9 +1,16 @@
+.react-slideshow-container {
+    max-width: 1024px;
+    position: relative;
+    margin: 0 auto;
+}
+
 .each-slide-effect > div {
     justify-content: center;
     background-size: cover;
     height: 750px;
     width: 750px;
     margin: 5px auto;
+    border-radius: 5px; 
 }
 .gallery .react-slideshow-container .default-nav {
     height: 50px;
