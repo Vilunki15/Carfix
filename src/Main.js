@@ -5,39 +5,15 @@ import Gallery from './Gallery';
 import Contact from './Contact';
 import './App.css';
 import './Assets/Font/fonts.css';
+import Cookies from './Cookies';
 
 const Main = () => {
-    /** 
-    const [ currentWidth, setCurrentWidth ] = useState(window.innerWidth);
-    useEffect(() => {
-        const handleResize = () => {
-            setCurrentWidth(window.innerWidth);
-        };
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-    */
+    const [ cookies, setCookies ] = useState(true);
+
+
+
     //Using useState to store current main content
     const [ currentPage, setCurrentPage ] = useState('home');
-    //function for pagechange
-    const handlePageChange = (page) => () => {
-        setCurrentPage(page);
-    }
-    //useState for keeping mobile menu state.  
-    const [ isMenuOpen, setIsMenuOpen ] = useState('off');
-    const handleNavbtn = () => {
-        let navbar = document.querySelector('.navbar');
-        if (isMenuOpen == 'on') {
-            navbar.classList.remove('open');
-            setIsMenuOpen('off');
-        }
-        else {
-            navbar.classList.add('open');
-            setIsMenuOpen('on');
-        }
-    }
     //Switch case for page selector
     let mainContent;
     switch (currentPage) {
@@ -55,6 +31,23 @@ const Main = () => {
             break;
         default:
             mainContent = <Home />;
+    }
+    //function for pagechange
+    const handlePageChange = (page) => () => {
+        setCurrentPage(page);
+    }
+    //useState for keeping mobile menu state.  
+    const [ isMenuOpen, setIsMenuOpen ] = useState('off');
+    const handleNavbtn = () => {
+        let navbar = document.querySelector('.navbar');
+        if (isMenuOpen == 'on') {
+            navbar.classList.remove('open');
+            setIsMenuOpen('off');
+        }
+        else {
+            navbar.classList.add('open');
+            setIsMenuOpen('on');
+        }
     }
     //function for url redirecting
     const redirectToUrl = (url) => {
@@ -76,6 +69,9 @@ const Main = () => {
             </div>
             <div>
                 {mainContent}
+            </div>
+            <div>
+                
             </div>
         </div>
     );
