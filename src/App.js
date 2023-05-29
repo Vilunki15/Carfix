@@ -4,7 +4,6 @@ import Main from './Main';
 import Footer from './Footer';
 
 const App = () => {
-    //test
     return (
         <div className='body'>
             <Header />
