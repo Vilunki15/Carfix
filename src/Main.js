@@ -11,20 +11,14 @@ const Main = () => {
     //useStates for cookies. 
     const [ isCookiesAccepted, setCookiesAccepted ] = useState(false);
     const [ isCookiesPrompted, setCookiesPrompted ] = useState(false);
-    console.log(isCookiesAccepted);
-    
-    //console.log(isCookiesPrompted)
     //cookie component hide or show. Hidden when clicked
     let cookiePrompt;
     if (isCookiesPrompted == false) {
         cookiePrompt = <CookiePrompt setCookiesAccepted={setCookiesAccepted} setCookiesPrompted={setCookiesPrompted} />
-        //console.log('näkyy')
     }
     else if (isCookiesPrompted == true) {
-        cookiePrompt = null;
-        //console.log('null')
+        cookiePrompt = null
     }
-    
     //Using useState to store current main content
     const [ currentPage, setCurrentPage ] = useState('home');
     //Switch case for page selector
