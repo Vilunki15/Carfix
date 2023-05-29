@@ -4,11 +4,15 @@ import './Assets/Font/fonts.css';
 import Maps from './Maps';
 import NoCookies from './NoCookies';
 
-const Contact = () => {
+const Contact = ({ isCookiesAccepted }) => {
     let mapsContent;
-    
-
-
+    console.log(isCookiesAccepted)
+    if (isCookiesAccepted == false) {
+        mapsContent = <NoCookies />
+    }
+    else {
+        mapsContent = <Maps />
+    }
 
     return (
         <div className='content'>

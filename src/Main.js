@@ -1,17 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Home from './Home';
 import Services from './Services';
 import Gallery from './Gallery';
 import Contact from './Contact';
 import './App.css';
 import './Assets/Font/fonts.css';
-import Cookies from './Cookies';
+import CookiePrompt from './CookiePrompt';
 
 const Main = () => {
-    const [ cookies, setCookies ] = useState(true);
-
-
-
+    //useStates for cookies. 
+    const [ isCookiesAccepted, setCookiesAccepted ] = useState(false);
+    const [ isCookiesPrompted, setCookiesPrompted ] = useState(false);
+    console.log(isCookiesAccepted);
+    
+    //console.log(isCookiesPrompted)
+    //cookie component hide or show. Hidden when clicked
+    let cookiePrompt;
+    if (isCookiesPrompted == false) {
+        cookiePrompt = <CookiePrompt setCookiesAccepted={setCookiesAccepted} setCookiesPrompted={setCookiesPrompted} />
+        //console.log('näkyy')
+    }
+    else if (isCookiesPrompted == true) {
+        cookiePrompt = null;
+        //console.log('null')
+    }
+    
     //Using useState to store current main content
     const [ currentPage, setCurrentPage ] = useState('home');
     //Switch case for page selector
@@ -27,7 +40,7 @@ const Main = () => {
             mainContent = <Gallery />;
             break;
         case 'contact':
-            mainContent = <Contact />;
+            mainContent = <Contact isCookiesAccepted={isCookiesAccepted} />;
             break;
         default:
             mainContent = <Home />;
@@ -71,7 +84,7 @@ const Main = () => {
                 {mainContent}
             </div>
             <div>
-                
+                {cookiePrompt}
             </div>
         </div>
     );
