@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Home from './Home';
 import Services from './Services';
 import Gallery from './Gallery';
@@ -28,7 +28,7 @@ const Main = () => {
             mainContent = <Home />;
             break;
         case 'services':
-            mainContent = <Services />;
+            mainContent = <Services />
             break;
         case 'gallery':
             mainContent = <Gallery />;
