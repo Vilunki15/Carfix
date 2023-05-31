@@ -19,7 +19,7 @@ const Contact = ({ isCookiesAccepted }) => {
             <h1>Yhteystiedot</h1>
             <ul>
                 <li className='content-li'>Puhelin: 045 224 9515</li>
-                <li className='content-li'>Osoite: Tervatie 4, 86300 Oulaine</li>
+                <li className='content-li'>Osoite: Tervatie 4, 86300 Oulainen</li>
                 <li className='content-li'>Sähköposti: carfixoulainen@gmail.com</li>
             </ul>
             {mapsContent}
