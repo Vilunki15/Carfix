@@ -13,10 +13,10 @@ const Main = () => {
     const [ isCookiesPrompted, setCookiesPrompted ] = useState(false);
     //cookie component hide or show. Hidden when clicked
     let cookiePrompt;
-    if (isCookiesPrompted == false) {
+    if (isCookiesPrompted === false) {
         cookiePrompt = <CookiePrompt setCookiesAccepted={setCookiesAccepted} setCookiesPrompted={setCookiesPrompted} />
     }
-    else if (isCookiesPrompted == true) {
+    else if (isCookiesPrompted === true) {
         cookiePrompt = null
     }
     //Using useState to store current main content
@@ -47,7 +47,7 @@ const Main = () => {
     const [ isMenuOpen, setIsMenuOpen ] = useState('off');
     const handleNavbtn = () => {
         let navbar = document.querySelector('.navbar');
-        if (isMenuOpen == 'on') {
+        if (isMenuOpen === 'on') {
             navbar.classList.remove('open');
             setIsMenuOpen('off');
         }

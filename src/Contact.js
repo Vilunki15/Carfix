@@ -7,7 +7,7 @@ import NoCookies from './NoCookies';
 const Contact = ({ isCookiesAccepted }) => {
     let mapsContent;
     console.log(isCookiesAccepted)
-    if (isCookiesAccepted == false) {
+    if (isCookiesAccepted === false) {
         mapsContent = <NoCookies />
     }
     else {

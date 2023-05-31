@@ -12,6 +12,7 @@ const Maps = () => {
                 style={{ border: '0', paddingBottom: '50px' }}
                 allowFullScreen=''
                 loading='lazy'
+                title='Carfix Oulainen sijainti'
             ></iframe>
         </div>
     );
